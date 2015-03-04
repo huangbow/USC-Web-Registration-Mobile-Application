@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_bg">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:background="@drawable/myusc"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+
+            android:singleLine="true"
+            android:text="   Your Current Calendar"
+            android:background="@drawable/back"
+            android:textColor="#FFD700"
+            android:textSize="25sp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        >
+
+
+        </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/left_drawer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:text="  M"
+            android:textSize="20sp"
+            android:textAlignment="gravity"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="40dp"
+            android:text="  T"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:textSize="20sp"
+            android:dividerHeight="1dp"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="  W"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:text=" Th"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="  F"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="  S"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+
+            android:background="@drawable/button"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="N"
+            android:id="@+id/monday"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:background="#00FF00"
+            />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/tuesday"
+            android:text="N"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:background="#00FF00"
+            /> <Button
+        android:layout_width="40dp"
+        android:id="@+id/wednesday"
+        android:layout_height="40dp"
+        android:text="N"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+
+        android:background="#00FF00"/> <Button
+        android:layout_width="40dp"
+        android:id="@+id/thursday"
+        android:layout_height="40dp"
+        android:text="  N"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:background="#00FF00"
+        /> <Button
+        android:layout_width="40dp"
+        android:id="@+id/friday"
+        android:layout_height="40dp"
+        android:text="  N"
+        android:textSize="20sp"
+
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:background="#00FF00"
+        /> <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/saturday"
+        android:text="N"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:background="#00FF00"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

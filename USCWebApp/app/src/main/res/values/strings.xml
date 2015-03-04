@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">USCWebApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_first_page">FirstPage</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="calendar_create">Create Calendar</string>
+    <string name="calendar">Calendar</string>
+    <string-array name="names">
+        <item>Department</item>
+        <item>Term</item>
+        <item>Course ranking</item>
+        <item>Professors rating</item>
+        <item>Day</item>
+        <item>Time</item>
+    </string-array>
+
+    <string name="title_activity_user_profile_edit">UserProfileEdit</string>
+
+</resources>

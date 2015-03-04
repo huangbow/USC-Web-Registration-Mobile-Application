@@ -1,0 +1,23 @@
+[
+ {
+ "text" : "Welcome to this App.\nYou can handle the process of web registration by the features implemented in this circle.",
+ "image" : "wc_circle",
+ },
+ {
+ "text" : "Swipe to four directions, you can operate with system settings, calendars, course check out, and searching.",
+ "image" : "swipe",
+ },
+ {
+ "text" : "Compare different calendars, and choose one you want to checkout",
+ "image" : "panels",
+ },
+ {
+ "text" : "Remind you each due of registration process",
+ "image" : "wc_window",
+ },
+ {
+ "text" : "Login and start to use, :)",
+ "image" : "twitter",
+ "button" : "Thanks to use!"
+ }
+]

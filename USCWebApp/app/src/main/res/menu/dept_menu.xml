@@ -1,0 +1,8 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dept"
+        android:title="CS" />
+    <item android:id="@+id/term"
+        android:title="EE" />
+
+</menu>

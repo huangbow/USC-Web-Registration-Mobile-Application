@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_bg">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="           Department"
+        android:background="#990000"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+android:id="@+id/department"
+        android:singleLine="true"
+        android:text="           Department"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:id="@+id/term"
+        android:text="                Term"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/prof"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="     Professors Rating"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:id="@+id/day"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="                 Day"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/time"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="                Time"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/course"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="      Course Ranking"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+</LinearLayout>

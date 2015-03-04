@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_bg">
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:background="@drawable/myusc"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="        Pick your Days"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    <CheckBox
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:id="@+id/monday"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="         Monday"
+        android:background="@drawable/yellow_bg"
+        android:textColor="#990000"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:layout_width="320dp"
+            android:id="@+id/tuesday"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+
+            android:singleLine="true"
+            android:text="         Tuesday"
+            android:background="@drawable/yellow_bg"
+            android:textColor="#990000"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:id="@+id/wednesday"
+        android:singleLine="true"
+        android:text="       Wednesday"
+        android:background="@drawable/yellow_bg"
+        android:textColor="#990000"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+</LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/thursday"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="        Thursday"
+        android:background="@drawable/yellow_bg"
+        android:textColor="#990000"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+</LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/friday"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="           Friday"
+        android:background="@drawable/yellow_bg"
+        android:textColor="#990000"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+</LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/saturday"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="         Saturday"
+        android:background="@drawable/yellow_bg"
+        android:textColor="#990000"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/set"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="     SET"
+        android:textColor="#FFD700"
+        android:background="#990000"
+        android:textSize="17sp"
+        android:textIsSelectable="false" />
+
+</LinearLayout>
+</LinearLayout>

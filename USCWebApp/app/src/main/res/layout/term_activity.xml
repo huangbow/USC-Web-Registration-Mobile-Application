@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_bg">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:background="@drawable/myusc"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="     Select Your Term"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:id="@+id/fall"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="            Fall 2014"
+            android:background="@drawable/yellow_bg"
+            android:textColor="#990000"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="320dp"
+            android:id="@+id/spring"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="         Spring 2015"
+            android:background="@drawable/yellow_bg"
+            android:textColor="#990000"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="320dp"
+            android:id="@+id/summer"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="       Summer 2015"
+            android:background="@drawable/yellow_bg"
+            android:textColor="#990000"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+
+
+</LinearLayout>
+</ScrollView>

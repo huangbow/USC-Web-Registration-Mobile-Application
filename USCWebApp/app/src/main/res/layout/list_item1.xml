@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dip"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#990000"
+        android:textSize="17dip"
+        android:paddingTop="5dp"
+        android:clickable="false"
+        android:paddingBottom="5dp"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:id="@+id/set"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="                      CLICK! to add this to your Calendar."
+        android:textColor="#FFD700"
+        android:background="#990000"
+        android:textSize="13sp"
+
+        android:textIsSelectable="false" />
+
+
+</LinearLayout>

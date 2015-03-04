@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow_bg">
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:background="@drawable/myusc"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+
+        android:singleLine="true"
+        android:text="        Pick your Time"
+        android:background="@drawable/back"
+        android:textColor="#FFD700"
+        android:textSize="30sp"
+        android:textIsSelectable="false" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="13dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+        <RadioGroup
+            android:id="@+id/tType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="200dp"
+
+            android:layout_height="80dp"
+            android:id="@+id/include"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:checked="true"
+            android:singleLine="true"
+            android:text="include"
+            android:textColor="#990000"
+            android:textSize="14sp"
+            android:textIsSelectable="false" />
+        <RadioButton
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:id="@+id/exclude"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="exclude"
+            android:textColor="#990000"
+            android:textSize="14sp"
+            android:textIsSelectable="false" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    <TimePicker
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:id="@+id/timePicker"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:backgroundTint="#990000"
+        android:singleLine="true"
+        android:textColor="#FFD700"
+        android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="   To"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+        <TimePicker
+            android:layout_width="220dp"
+            android:layout_height="100dp"
+            android:id="@+id/timePicker1"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+            android:backgroundTint="#990000"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            android:textIsSelectable="false" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:id="@+id/set"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="    SET"
+            android:textColor="#FFD700"
+            android:background="#990000"
+            android:textSize="20sp"
+            android:textIsSelectable="false" />
+</LinearLayout>
+    </LinearLayout>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta charset="utf-8" />
+<title>PsychStudy</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+<link href="page.css" rel="stylesheet" />
+<link href="simple-slider-volume.css" rel="stylesheet" />
+<link href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/theme-classic/theme-classic.css" />
+<style>
+</style>
+</head>
+<body>
+    <div style="display: none;">
+        <div class="container">
+            <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float: right; font-size: 80%; position: relative; top: -10px">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div style="padding-top: 30px" class="panel-body">
+                        <div style="display: none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                        <form id="loginform" class="form-horizontal" role="form">
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email" />
+                            </div>
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> <input id="login-password" type="password" class="form-control" name="password" placeholder="password" />
+                            </div>
+                            <div style="margin-top: 10px" class="form-group">
+                                <!-- Button -->
+                                <div class="col-sm-12 controls">
+                                    <a id="btn-login" href="#" class="btn btn-success" onclick="javascript:loginFunction()">Login </a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                                        Don't have an account!
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()"> Sign Up Here </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="signupbox" style="display: none; margin-top: 50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                        <div style="float: right; font-size: 85%; position: relative; top: -10px">
+                            <a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form id="signupform" class="form-horizontal" role="form">
+                            <div id="signupalert" style="display: none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="email" placeholder="Email Address" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname" class="col-md-3 control-label">Username</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="username" placeholder="Username" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Confirm Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Phone Number</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="phoneNumber" placeholder="Phone Number" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="icode" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="button" class="btn btn-info">
+                                        <i class="icon-hand-right"></i>Sign Up
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="loginPage" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <br /> <br /> <br /> <br />
+            <div style="text-align: center;">
+                USC Psychology Study <br /> <br /> <br /> <br />
+                <a href="#popupLogin" data-rel="popup" data-theme="b" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-user ui-btn-icon-left ui-btn-b" data-transition="pop">Sign in</a>
+                <div data-dismissible="false" data-role="popup" id="popupLogin" data-theme="b" class="ui-corner-all">
+                    <a href="#" data-rel="back" id="closeSignInDialog" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                    <form>
+                        <div style="padding: 10px 20px;">
+                            <h3>Please login</h3>
+                            <label for="un" class="ui-hidden-accessible">Username:</label> <input name="user" id="un" value="" placeholder="username" data-theme="b" type="text" /> <label for="pw" class="ui-hidden-accessible">Password:</label> <input name="pass" id="pw" value="" placeholder="password" data-theme="b" type="password" />
+                            <button type="button" onclick="javascript:loginFunction()" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <br /> <br />
+                <a href="#popupSignup" data-rel="popup" data-theme="b" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-b" data-transition="pop">Sign Up</a>
+                <div data-role="popup" id="popupSignup" data-theme="b" class="ui-corner-all">
+                    <form>
+                        <div style="padding: 10px 20px;">
+                            <h3>Please login</h3>
+                            <label for="un" class="ui-hidden-accessible">Username:</label> <input name="user" id="un" value="" placeholder="username" data-theme="a" type="text"> <label for="pw" class="ui-hidden-accessible">Password:</label> <input name="pass" id="pw" value="" placeholder="password" data-theme="a" type="password">
+                            <button type="button" onclick="javascript:nextButton('#page1')" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <div data-role="page" id="page1" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <div id="iconDiv">
+                <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-bullets"></button>
+                <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-clock"></button>
+            </div>
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <div style="text-align: center;">
+                Welcome to Psychology Study<br /></br> Some Instruction and welcome message regarding the study <br /> <br /> <br />
+                <button id="btn-signup" type="button" class="btn btn-info" onclick="javascript:startQuestionairre()">
+                    <i class="icon-hand-right"></i>Start
+                </button>
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question1">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <!-- <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>  -->
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">Q1: Please rate your current level of anxiety on a scale of 1 to 10 (1 = "not at all anxious", 10 = "the worst anxiety you could imagine")</div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question2')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question2">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question1')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q2: What anxious thoughts am I having ?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question3')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question3">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question2')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q3: What evidence do you have for your anxiousness ?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question4')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question4">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question3')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q4: What evidence do you have that the opposite is true?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question5')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question5">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question4')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q5: Is there another point of view for your anxiousness ?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question6')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question6">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question5')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q6: Do you think there is another explanation for your anxious thought ?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question7')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question7">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question6')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">
+                Q7: What would you sau to a close friend who is feeling the same way ? Will it be different from what you say to yourself? Why is that?
+                <div>
+                    <form>
+                        <textarea class="textareaDiv" rows="7 !important" name="textarea-1" id="textarea-1"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-arrow-r ui-btn-icon-right">
+                Next <input onclick="javascript:nextButton('#question8')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="question8">
+        <div data-role="header">
+            <h1 id="page1Title">Psychology Study</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <button onclick="javascript:nextButton('#question7')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-back" style="float: left"></button>
+            <button onclick="javascript:exitQuestionnaire()" class="exitButton ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-home" style="float: right"></button>
+            <div class="questionDiv">Q8: Please rate your current level of anxiety on a scale of 1 to 10 (1 = "not at all anxious", 10 = "the worst anxiety you could imagine")</div>
+            <div class="nextButton ui-input-btn ui-btn ui-icon-check ui-btn-icon-right">
+                Submit <input onclick="javascript:nextButton('#page1')" data-enhanced="true" value="Enhanced - Right" type="button">
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>&copy; 2015 USC Dornsife</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <div class="loading-image" style="display: none;"></div>
+    <div style="display: none;" data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width: 400px;">
+        <div data-role="header" data-theme="a">
+            <h1>Delete Page?</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3 class="ui-title">Are you sure you want to delete this page?</h3>
+            <p>This action cannot be undone.</p>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Delete</a>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="simple-slider.min.js"></script>
+    <script src="jQSlide.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="page.js"></script>
+    <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+    <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+    <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.datebox.min.js"></script>
+    <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
+</body>
+</html>

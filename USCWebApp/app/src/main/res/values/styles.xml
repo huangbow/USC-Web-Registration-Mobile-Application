@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFD700</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:popupMenuStyle">@style/Widget.AppCompat.PopupMenu</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+
+    </style>
+    <style name="Theme.Example.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFD700</item>
+        <item name="android:background">#990000</item>
+
+
+    </style>
+</resources>
